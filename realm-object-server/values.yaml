@@ -55,10 +55,14 @@ sync:
   syncWorkers:
     - name: default
       replicas: 1
+      pvcSize: "1Gi"
     # Example of extra sync worker groups:
     # - name: alpha
     # - name: bravo
   logLevel: info
+
+  # The default PVC size request for all sync workers
+  defaultPvcSize: "1Gi"
 
   # Enable or disable download log compaction
   enableDownloadLogCompaction: "true"
