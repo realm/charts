@@ -113,13 +113,13 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
             - name: SYNC_WORKER_ENABLE_DOWNLOAD_LOG_COMPACTION
-              value: {{ .enableDownloadLogCompaction | $values.sync.enableDownloadLogCompaction | quote }}
+              value: {{ .enableDownloadLogCompaction | default $values.sync.enableDownloadLogCompaction | quote }}
             - name: SYNC_WORKER_MAX_DOWNLOAD_SIZE
-              value: {{ .maxDownloadSize | $values.sync.maxDownloadSize | quote }}
+              value: {{ .maxDownloadSize | default $values.sync.maxDownloadSize | quote }}
             - name: SYNC_WORKER_FEATURE_TOKEN
               value: {{ $values.sync.featureToken | quote }}
             - name: LOG_LEVEL
-              value: {{ .logLevel | $values.sync.logLevel }}
+              value: {{ .logLevel | default $values.sync.logLevel }}
           command:
             - node
             - ./dist/KubernetesSyncWorkerGroup.js
@@ -172,7 +172,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 1Gi
+            storage: {{ .pvcSize | default $values.sync.defaultPvcSize | quote }}
 ---
 apiVersion: v1
 kind: Endpoints
