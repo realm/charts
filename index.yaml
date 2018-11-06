@@ -2,7 +2,16 @@ apiVersion: v1
 entries:
   realm-object-server:
   - apiVersion: v1
-    created: 2018-06-21T19:33:55.540140724+02:00
+    created: 2018-11-06T10:06:24.202301501-07:00
+    description: A Helm chart for Kubernetes
+    digest: 1d6ae24a82321e473110408cab555d4b00ebbedbe0dd5fc45eb3bdecfed1c789
+    icon: https://realm.io/assets/img/favicons/favicon-32x32.png
+    name: realm-object-server
+    urls:
+    - https://realm.github.io/charts/realm-object-server-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    created: 2018-11-06T10:06:24.201338394-07:00
     description: A Helm chart for Kubernetes
     digest: 6c3726cebc1d9637f171ed0613f11ad06913570a7964865b902edda8df41a288
     icon: https://realm.io/assets/img/favicons/favicon-32x32.png
@@ -12,11 +21,11 @@ entries:
     version: 0.1.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-06-21T19:33:55.542229523+02:00
+    created: 2018-11-06T10:06:24.203274428-07:00
     description: A Helm chart for Kubernetes
     digest: b31c882ee7b0755094a18faf6bb34ba9403d665453d35d0ea0c1a56114043c62
     name: realm-object-server
     urls:
     - https://realm.github.io/charts/docs/realm-object-server-0.1.0.tgz
     version: 0.1.0
-generated: 2018-06-21T19:33:55.535666508+02:00
+generated: 2018-11-06T10:06:24.199957417-07:00
