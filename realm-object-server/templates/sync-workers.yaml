@@ -190,7 +190,6 @@ metadata:
     group: {{ .name }}
   annotations:
     sync.realm.io/group: {{ .name }}
-subsets: []
 ---
 apiVersion: v1
 kind: Service
