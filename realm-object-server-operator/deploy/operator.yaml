@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realm-object-server-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: realm-object-server-operator
+  template:
+    metadata:
+      labels:
+        name: realm-object-server-operator
+    spec:
+      serviceAccountName: realm-object-server-operator
+      containers:
+        - name: realm-object-server-operator
+          # Replace this with the built image name
+          image: REPLACE_IMAGE
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "realm-object-server-operator"

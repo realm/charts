@@ -1,0 +1,19 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: objectservers.k8s.realm.io
+spec:
+  group: k8s.realm.io
+  names:
+    kind: ObjectServer
+    listKind: ObjectServerList
+    plural: objectservers
+    singular: objectserver
+  scope: Namespaced
+  subresources:
+    status: {}
+  version: v1alpha1
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true

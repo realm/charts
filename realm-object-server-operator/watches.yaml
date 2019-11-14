@@ -1,0 +1,5 @@
+---
+- version: v1alpha1
+  group: k8s.realm.io
+  kind: ObjectServer
+  chart: /opt/helm/helm-charts/realm-object-server
