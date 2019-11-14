@@ -125,7 +125,8 @@ spec:
               value: {{ .logLevel | default $values.sync.logLevel }}
           command:
             - node
-            - ./dist/KubernetesSyncWorkerGroup.js
+            - /usr/local/lib/node_modules/realm-object-server/dist/KubernetesSyncWorkerGroup.js
+          workingDir: /data
           ports:
             - name: internal
               containerPort: 9081

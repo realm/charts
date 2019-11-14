@@ -31,7 +31,8 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
             - node
-            - ./dist/KubernetesCoreServices.js
+            - /usr/local/lib/node_modules/realm-object-server/dist/KubernetesCoreServices.js
+          workingDir: /data
           env:
             - name: PUBLIC_KEY_PATH
               value: /config/public.pem
