@@ -106,6 +106,7 @@ coreServices:
     LogService: {}
     HealthService: {}
     WelcomeService: {}
+    PermissionsService: {}
     GraphQLService: {}
   logLevel: info
   resources: {}
