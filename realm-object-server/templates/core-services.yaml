@@ -40,6 +40,10 @@ spec:
               value: /secret/private.pem
             - name: DISCOVERY_CONFIG_PATH
               value: /config/discovery.yaml
+            {{ with .Values.coreServices.logLevel }}
+            - name: LOG_LEVEL
+              value: {{ . }}
+            {{ end }}
           ports:
             - name: http
               containerPort: 9080
